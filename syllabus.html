@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllabus</title>
+  <link rel="shortcut icon" href="favi-photoaidcom-cropped.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    
+    /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+header {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(1, 127, 146);
+  color: #fff;
+  padding: 15px 25px;
+  position: relative;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  
+  display: flex;
+  align-items: center;
+    
+}
+nav a:hover{
+  color: rgb(0, 15, 184);
+  transform: scale(1.1);
+   text-decoration: underline;
+}
+/* Center navigation for screens larger than 768px */
+@media screen and (min-width: 769px) {
+    header nav {
+      justify-content: center; /* Center the nav items */
+      width: 100%;
+    }
+
+    header nav ul {
+      display: flex;
+      gap: 20px;
+      justify-content: center; /* Center the list items */
+      margin: 0;
+      padding: 0;
+    }
+}
+
+header nav .menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    header nav .menu-toggle {
+        display: block;
+        
+    }
+
+    header nav ul.active {transform: translateX(0); /* Default active position (visible) */
+    opacity: 1; /* Ensure it is fully visible */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Sliding effect */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(1, 127, 146);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+}
+/* For mobile screens, menu toggle will slide down smoothly */
+@media screen and (max-width: 768px) {
+    header nav ul.active {
+        display: block;
+        position: absolute;
+        top: 90px; /* Adjust to position below the logo */
+        left: 0;
+        width: 100%;
+        background-color: rgb(1, 127, 146);
+        padding: 10px 0;
+        box-sizing: border-box;
+        z-index: 1000;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    /* Mobile menu links */
+    header nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* Slide down animation */
+ /* For mobile screens, menu toggle will slide down smoothly */
+@media screen and (max-width: 768px) {
+    header nav ul.active {
+        display: block;
+        position: absolute;
+        top: 90px; /* Adjust to position below the logo */
+        left: 0;
+        width: 100%;
+        background-color: rgb(1, 127, 146);
+        padding: 10px 0;
+        box-sizing: border-box;
+        z-index: 1000;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    /* Mobile menu links */
+    header nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* Slide down animation */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-10%);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 10;
+        }
+    }
+}
+header nav ul:not(.active) {
+    animation: slideUp 0.3s ease-in-out;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(1, 127, 146);
+    padding: 20px 0;
+    z-index: 1000;
+}
+}
+
+/* Content section */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+p{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+}
+.grid-container {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .grid-item {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: start;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    .grid-item h2 {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+        margin-bottom: 10px;
+    }
+
+    .grid-item button {
+        background-color: rgb(1, 127, 146);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 5px;
+        margin-left: 68%;
+    }
+
+    .grid-item button:hover {
+        background-color: rgba(1, 10, 110, 0.925);
+        transform: scale(1.1);
+    }
+    .grid-item hr {
+    border: none;
+    border-top: 2px solid #ddd; /* Light gray line */
+    margin: 20px 20px; /* Add spacing above and below the line */
+    gap: 0px;
+}
+.grid-item .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.grid-item .fa-book {
+    font-size: 24px;
+  
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width for vertical scrollbar */
+    height: 6px; /* Adjust the height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(1, 127, 146); /* Set the color of the scrollbar thumb */
+    border-radius: 1px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(2, 171, 197); /* Darker shade when hovered */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Background of the scrollbar track */
+    border-radius: 1px; /* Rounded corners for the track */
+}
+.subhead{
+  
+  text-decoration: none;
+  color: black;
+}
+.subhead:hover {
+    color: rgb(1, 127, 146); /* Change text color */
+    transform: scale(1.1); /* Slight zoom effect */
+    text-decoration: underline; /* Optional underline */
+  }
+  .grid-item:hover {
+    background-color: #a7a7a738; /* Light black background */
+    /* Change the cursor to a pointer when hovered */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+header .logo img {
+  height: 100%; /* Match the height of the header */
+  max-height: 60px; /* Set a maximum height to ensure it doesn't stretch too much */
+  object-fit: contain; /* Maintain aspect ratio and prevent distortion */
+}
+
+footer .social-icons a:hover {
+    color: rgb(1, 127, 146); /* Change color on hover */
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Align icons vertically */
+    gap: 20px; /* Add space between the icons */
+    margin-bottom: 10px; /* Add spacing below the icons */
+}
+footer .social-icons a:hover i {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+footer hr{
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bictelogo.png" alt="Logo" />
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <ul id="nav-list">
+                <li><a href="Bicte.html">Home</a></li>
+                <li><a href="semister.html">Questions</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section class="content">
+        <h1 style="font-family: Open Sans, sans-serif;
+        font-optical-sizing: auto;">
+        Bachelor of Information Communication and Technology Education</h1><br>
+        <a href="Bicte.html"class="subhead">Home </a>   //  <a href="syllabus.html" class="subhead">Syllabus</a><br><br>
+        <div class="grid-container">
+            <!-- Grid items -->
+            <div class="grid-item">
+                <h2>First Semister</h2>
+                <p>The Total number of Subjects: 6</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='1st.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Second Semister</h2>
+                <p>The Total number of Subjects: 6</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='2nd.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Third Semister</h2>
+                <p>The Total number of Subjects: 6</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='3rd.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Fourth Semister</h2>
+                <p>The Total number of Subjects: 6</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='4th.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Fifth Semister</h2>
+                <p>The Total number of Subjects: 5</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='5th.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Sixth Semister</h2>
+                <p>The Total number of Subjects: 5</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='6th.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Seventh Semister</h2>
+                <p>The Total number of Subjects: 5</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='7th.html'">More..</button>
+              </div>
+          
+            </div>
+            <div class="grid-item">
+                <h2>Eight Semister</h2>
+                <p>The Total number of Subjects: 5</p>
+                <hr>
+                <div class="content-wrapper">
+                  <i class="fa fa-book"></i>
+                  <button onclick="location.href='8th.html'">More..</button>
+              </div>
+          
+            </div>
+        </div>
+    </section>
+    </main>
+    
+    <script>
+      window.onload = function() {
+    // Delay the scroll reset by 10 milliseconds
+    setTimeout(function() {
+        document.documentElement.scrollTop = 0; // Reset scroll position for most browsers
+        document.body.scrollTop = 0;            // For Safari
+    }, 10);  // Delay by 10 milliseconds (you can adjust the value)
+};
+        // Function to toggle the menu
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+    
+        // Function to hide the menu after scrolling on mobile
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const navList = document.getElementById('nav-list');
+            const menuButton = document.querySelector('.menu-toggle');
+            if (window.innerWidth <= 768) {  // Check for mobile screen size
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScrollTop > lastScrollTop && navList.classList.contains('active')) {
+                    navList.classList.remove('active'); // Hide menu on scroll down
+                }
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Reset scroll position
+            }
+        });
+    
+        // Automatically close the menu when switching to a larger screen
+        window.addEventListener('resize', function() {
+            const navList = document.getElementById('nav-list');
+            if (window.innerWidth > 768 && navList.classList.contains('active')) {
+                navList.classList.remove('active'); // Remove active class on resize to larger screen
+            }
+        });
+       // Close the menu if clicked anywhere outside the menu or logo
+document.addEventListener('click', function(event) {
+    const navList = document.getElementById('nav-list');
+    const menuButton = document.querySelector('.menu-toggle');
+    const logo = document.querySelector('.logo');
+
+    // Check if the click is outside the nav menu and the menu button
+    if (!navList.contains(event.target) && !menuButton.contains(event.target) && !logo.contains(event.target)) {
+        navList.classList.remove('active'); // Close the menu
+    }
+});
+
+    </script>
+    <footer>
+       <hr>
+        <p>Copyright &copy; <a href="" style="color: #000000; text-decoration: none;">Aswasan Khadka || </a> All BICTE- 2024</p>
+    </footer>
+</body>
+</html>

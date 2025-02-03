@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch</title>
+    <link rel="stylesheet" href="check.css">
+    <link rel="shortcut icon" href="favi-photoaidcom-cropped.png" type="image/x-icon">
+</head>
+<body>
+    
+
+<div class="navbar">
+  <a href="#" class="logo">Aswasan!!</a>
+  <ul>
+      <li><a href="choose.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      
+      <li><a href="site3.html">Contact</a></li>
+  </ul>
+</div>
+
+<div class="css-masonry">
+     
+    <!-- item -->
+    <div class="item">
+      <!-- number of the item -->
+      <div class="item-number">1 </div> 
+      <br><br>
+      <div class="title">
+         <a href="Oldquestions.html" style="color: black; text-decoration: none;">Assessment-2080</a> 
+        </div>  
+    </div>
+      
+    <!-- item -->
+    <div class="item">
+      <!-- number of the item -->
+      <div class="item-number">2</div> 
+      <br><br>
+      <div class="title">
+         <a href="Oldquestions.html" style="color: black; text-decoration: none;">  DCN-2080</a> 
+      </div>
+    </div>
+      
+    <!-- item -->
+    <div class="item">
+      <!-- number of the item -->
+      <div class="item-number">3</div> 
+      <!-- image -->
+      <br><br>
+      <div class="title">
+         <a href="Oldquestions.html" style="color: black; text-decoration: none;">Java-2080 </a> 
+      </div>
+    </div>
+      
+    <!-- item -->
+    <div class="item">
+      <!-- number of the item -->
+      <div class="item-number">4</div> 
+        <br><br>
+      <div class="title">
+         <a href="Oldquestions.html" style="color: black; text-decoration: none;">SEPM-2080 </a> 
+      </div> 
+    </div>
+      
+    <!-- item -->
+    <div class="item">
+      <!-- number of the item -->
+      <div class="item-number">5</div> 
+      <br><br>
+      <div class="title">
+         <a href="Oldquestions.html" style="color: black; text-decoration: none;">Discrete Maths-2080</a> 
+        </div>    
+    </div>
+      
+    
+      
+      <!-- item -->
+
+      
+  </div>
+  <script>
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            const href = this.getAttribute('href'); // Get the link's href
+
+            document.body.classList.add('fade-out'); // Add fade-out class
+
+            setTimeout(() => {
+                window.location.href = href; // Redirect after the fade-out transition
+            }, 500); // Match the timeout to the CSS transition duration
+        });
+    });
+</script>
+  <div class="footer">
+    &copy; All BICTE-2024. All rights reserved.
+</div>
+</body>
+</html>

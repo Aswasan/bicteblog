@@ -1,0 +1,332 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Rock+3D&display=swap');
+*/
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Limelight&family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Henny+Penny&family=Jaro:opsz@6..72&family=Keania+One&family=Limelight&family=Londrina+Shadow&family=Rock+3D&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+.content {
+    padding: 20px;
+    
+}
+.section { 
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport for each section */
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+section {
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport for each section */
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+h1 {
+    color: #333; /* Header color */
+    font-size: 48px; /* Larger font size for the welcome message */
+    margin-bottom: 20px;
+    color: #e3e1d8; /* Stylish color for the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+}
+.welcome-section h1{
+    color: #333; /* Header color */
+    font-size: 40px; /* Larger font size for the welcome message */
+    margin-bottom: 20px;
+    color: #e3e1d8; /* Stylish color for the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+}
+p {
+    line-height: 1.6; /* Improve readability */
+}
+.welcome-section p , p1{
+    color: rgba(255, 255, 255, 0.87);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.667;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+ul {
+    list-style-type: disc; /* Bullet points for the list */
+    margin-left: 20px; /* Indentation for the list */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    background: url('photo.jpg') no-repeat center center/cover;
+}
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    text-align: center;
+    
+}
+.about-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 20px 20px; /* Padding for the button */
+    border: #ffffff solid;
+    color: rgb(217, 217, 217); /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 15px; /* Button font size */
+    transition: background 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+.about-button:hover {
+    border-color: #0088ccde;
+    color: #0088ccde;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.navbar ul li a.active {
+    background-color: #f0f0f0; /* Highlight color */
+    color: #333; /* Highlight text color */
+    border-bottom: 2px solid #007bff;
+    border-radius: 50px 15px; /* Optional underline */
+}
+hr{
+   width: 100%;
+   opacity:0.1;
+}
+.navbar {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top : 30px; /* Adjust this value to position the navbar vertically */
+    left: 52%;
+    transform: translateX(-50%);
+    letter-spacing: 0.1rem;
+    border-radius: 50px;
+    padding: 10px 20px;
+    z-index: 1000;
+    
+    
+}
+img{
+    clip-path: circle(50% at 50% 50%);
+
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+}
+
+.navbar ul li {
+    margin: 0 15px 5px 5px; 
+    /* Adjust margin for spacing between items */
+}
+
+.navbar ul li a {
+    color: black; /* Change link text color to black */
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s; /* Added transition for color change */
+}
+
+.navbar ul li a:hover {
+    color: white; /* Keep text color the same on hover */
+    box-shadow: 5px 0 0px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.445); /* Glowing effect */
+    border-radius: 50px 15px;
+    color: rgb(7, 7, 7); /* Change text color on hover to white */
+    background-color:  rgba(255, 248, 248, 0.514); /* Change background color on hover to black */
+    
+}
+
+.content {
+    margin-top: 80px; /* Adjust for fixed navbar height */
+    padding: 20px;
+    flex: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+.navbar ul li a {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.858);
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s; /* Added transition for color change */
+}
+
+
+.logo {
+    /*font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;*/
+    /*font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;*/
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    position: fixed;
+top: 30px; 
+left: 85px; 
+z-index: 1000; /* Ensure the logo is above other elements */
+}
+.menu-icon .line {
+    display: block;
+    width: 30px; /* Width of the lines */
+    height: 4px; /* Height of the lines */
+    background-color: white; /* Color of the lines */
+    margin: 5px 0; /* Space between lines */
+    transition: all 0.3s ease; /* Transition for smoothness */
+}
+
+
+
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
+    display: none; /* Hide mobile menu by default */
+    justify-content: flex-end; /* Align items to the right */
+    padding: 10px;
+    position: fixed;
+    top: 45px;
+    right: 0;
+    width: 200px; /* Set a fixed width for the mobile menu */
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow:  5px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed; /* Keep it fixed in the top right corner */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it appears above the menu */
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 30px;
+    background-color:rgb(249, 247, 247);
+    margin: 4px 0;
+}
+
+.nav-list {
+    
+    list-style: none;
+    display: none;
+    
+     /* Hide by default */
+}    
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide navbar for full screen */
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide desktop navbar on mobile */
+    }
+
+    .menu {
+        display: flex; /* Show mobile menu */
+    }
+
+    .nav-list.active {
+        padding: 80px;
+        display: flex; /* Show when active */
+        flex-direction: column; /* Change to vertical layout */
+        align-items: flex-start; /* Show when active */
+        justify-content: center;
+        background-color: #000000e2;
+        border-radius: 10%;
+
+    }
+
+    .nav-list li {
+        margin: 10px;
+        list-style: none; /* Remove margin for horizontal layout */
+    }
+    .nav-list li a {
+        
+        color: white; /* Change text color to white */
+        text-decoration: none;
+        font-size: 18px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 0.1rem;
+    }
+    .nav-list li a:hover {
+        background-color: rgba(255, 255, 255, 0); /* Light background on hover */
+        color:  rgb(255, 72, 0); /* Change text color on hover (optional) */
+    }
+    .menu ul li a.active {
+            color: rgb(255, 72, 0); /* Highlight text color */
+        }
+        .logo {
+            /*font-family: "Rock 3D", system-ui;
+            font-weight: 400;
+            font-style: normal;*/
+            /*font-family: "Limelight", sans-serif;
+          font-weight: 400;
+          font-style: normal;*/
+          font-family: "Henny Penny", system-ui;
+          font-weight: 400;
+          font-style: normal;
+            position: fixed;
+            top: 25px; 
+            left: 25px; 
+            z-index: 1000; /* Ensure the logo is above other elements */
+        }
+    
+}
+.footer {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    background-color: rgba(1, 3, 7, 0.932); /* Semi-transparent background */
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 0px; /* Padding for spacing */
+    position: relative; /* Position relative for layout */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -1px 5px rgba(255, 255, 255, 0.1); /* Optional subtle shadow */
+    border-top: 1px solid #ffcc00; /* Straight line above footer */
+    
+}
+
+.footer p {
+    margin: 5px 0; /* Space between paragraphs */
+    
+}

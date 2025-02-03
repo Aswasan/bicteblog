@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semister-List:</title>
+    <link rel="shortcut icon" href="favi-photoaidcom-cropped.png" type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');   
+    @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lexend+Exa:wght@100..900&family=Nerko+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Strike&family=Purple+Purse&family=Ribeye&family=Rubik+Dirt&family=Tiro+Bangla:ital@0;1&display=swap');
+ /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(1, 127, 146);
+    color: #fff;
+    padding: 15px 25px;
+    position: relative;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+@media screen and (min-width: 769px) {
+    header nav {
+      justify-content: center; /* Center the nav items */
+      width: 100%;
+    }
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 43px;
+    justify-content: center; /* Center the list items */
+    margin: 0;
+    padding: 0;
+    }
+}
+header nav .menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+
+    header nav .menu-toggle {
+        display: block;
+    }
+
+    header nav ul.active {
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(1, 127, 146);
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+    header .logo img {
+    height: 50px;
+}
+
+}
+
+nav a:hover{
+    color: rgb(0, 15, 184);
+    transform: scale(1.1);
+   text-decoration: underline;
+}
+/* Content section */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+/* Grid layout for items 3-10 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    max-width: 550px; /* Restrict the max width */
+    margin: 0 auto; /* Center the grid */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+/* Grid item hover effect */
+.grid-item:hover {
+    background-color: #a7a7a76c; /* Light black background */
+    cursor: pointer; /* Change the cursor to a pointer when hovered */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* List item hover effect */
+.first-semister a:hover {
+    color: #0038b1; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer when hovered */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* For large screens, add grid items 1 and 2 to the left */
+
+/* Hide grids 1 and 2 on small screens */
+@media screen and (max-width: 768px) {
+    
+    .syllabus-container {
+        display: none; /* Hides the syllabus container on mobile */
+    }
+    .notes-container{
+        display: none;
+    }
+
+}
+/* For mobile screens, menu toggle will slide down smoothly */
+@media screen and (max-width: 768px) {
+    header nav ul.active {
+        display: block;
+        position: absolute;
+        top: 83px; /* Adjust to position below the logo */
+        left: 0;
+        width: 100%;
+        background-color: rgb(1, 127, 146);
+        padding: 10px 0;
+        box-sizing: border-box;
+        z-index: 1000;
+        animation: slideDown 0.3s ease-in-out;
+    }
+
+    /* Mobile menu links */
+    header nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    /* Slide down animation */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-10%);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 10;
+        }
+    }
+}
+
+.grid-item {
+    
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-color: #00000062;
+  
+}
+
+/* Footer styles */
+footer {
+    color: rgba(0, 0, 0, 0.792);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+.first-semister{
+    list-style-type:disc; /* This will add bullets (dots) to each <a> tag */
+    padding: 0px;
+    
+}
+.first-semister li{
+    margin-left: 5%;
+    
+}
+.first-semister a{color: rgba(3, 134, 249, 0.881);
+text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width for vertical scrollbar */
+    height: 1px; /* Adjust the height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(1, 127, 146); /* Set the color of the scrollbar thumb */
+    border-radius: 1px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(2, 171, 197); /* Darker shade when hovered */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Background of the scrollbar track */
+    border-radius: 1px; /* Rounded corners for the track */
+}
+
+.syllabus-container {
+    float: left; /* Floats the container to the left */
+    width: 15%; /* Takes up 30% of the section or page width */
+    padding: 15px; /* Add some padding for spacing */
+    margin-left: 1px; /* Add margin for spacing to the right */
+    background-color: #f4f4f4; /* Optional: Add background color */
+    border-radius: 5px; /* Optional: Add border radius for rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    
+}
+
+.syllabus-container a {
+    display: block;
+    color: #0038b1;
+    text-decoration: none;
+}
+.notes-container {
+    position: absolute;
+    top: 65%;
+    left: 20px;
+    padding: 15px;
+    z-index: 1000;
+    width: 10%;
+}
+.notes-container a {
+    display: block;
+    color: #0038b1;
+    text-decoration: none;
+}
+.notes-container a:hover{
+    color: #000;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+/* footer section------*/
+footer {
+            background-color: #111111;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-section {
+            flex: 1 1 30%;
+            margin: 10px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        
+        .footer-section a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Flexbox layout for syllabus section */
+        .map {
+            display: flex;
+            gap: 20px; /* Space between items */
+            flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+        }
+
+        .map a {
+            
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .map a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center the icons horizontally */
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0198a3; /* Add hover effect */
+    text-decoration: underline;
+}
+
+        /* Subscribe Form */
+        .subscribe-form {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .subscribe-form input {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .subscribe-form button {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #00bcd4;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .subscribe-form button:hover {
+            background-color: #0198a3;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .footer-section {
+                text-align: center;
+                flex: 1 1 100%;
+            }
+        
+            .social-icons {
+                justify-content: center;
+                margin-left: 8%;
+            }
+        
+            .subscribe-form {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .subscribe-form input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        
+            .subscribe-form button {
+                width: 100%;
+            }
+}
+.subhead {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+.subhead:hover {
+    color: rgb(1, 127, 146); /* Change text color */
+    transform: scale(1.1); /* Slight zoom effect */
+    text-decoration: underline; /* Optional underline */
+  }
+  .decorative-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  top: 83px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 173, 181, 0.2);
+  border-radius: 50%;
+}
+
+.dots-pattern {
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-image: radial-gradient(circle, #00adb5 3%, transparent 3%);
+  background-size: 10px 10px;
+}
+
+.dashed-pattern {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 85, 255, 0.3),
+    rgba(0, 85, 255, 0.3) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+}
+.zigzag-pattern {
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    width: 100px;
+    height: 20px;
+    background-image: linear-gradient(to right, transparent 45%, #00adb5 45%, #00adb5 55%, transparent 55%);
+    background-size: 20px 20px;
+    transform: rotate(-45deg);
+    display: none; /* Hide by default */
+}
+
+/* Wave pattern */
+.wave-pattern {
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    width: 120px;
+    height: 20px;
+    background: repeating-radial-gradient(circle, #0198a3, #0198a3 10px, transparent 10px, transparent 20px);
+    display: none; /* Hide by default */
+}
+
+/* Show new patterns only on large screens */
+@media screen and (min-width: 769px) {
+    .zigzag-pattern {
+        display: block; /* Show zigzag pattern */
+    }
+    .wave-pattern {
+        display: block; /* Show wave pattern */
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bictelogo.png" alt="Logo" />
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <ul id="nav-list">
+                <li><a href="choose.html">Home</a></li>
+                <li><a href="semister.html">Questions</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="site3.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content"><br><br>
+            <br>
+            <div class="decorative-elements">
+                <div class="circle"></div>
+                <div class="dots-pattern"></div>
+                <div class="dashed-pattern"></div>
+                <div class="zigzag-pattern"></div>
+            
+            </div>
+            <h1 style="font-family: Tiro Bangla, serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;">Seventh Semister</h1>
+            <a href="choose.html"class="subhead">Home </a>   //  <a href="syllabus.html" class="subhead">Syllabus</a> // <a href="" class="subhead">7th sem</a>
+            <br>
+            <br>
+            <br>
+          
+              
+            <div class="notes-container">
+                <!-- Notes links can be added here -->
+                View Notes:
+                <br><br>
+                
+                <a href="#">5th sem Notes</a><br>
+                <a href="#">6th sem Notes</a><br>
+
+            </div>
+            <!-- Grids 3 to 10 centered in the middle of the screen -->
+            <div class="grid-container">
+                <div class="grid-item">
+                    <ol class="first-semister">
+
+                        Assessment and Evaluation in Education [Ed. 452]<br>
+                    </ol>
+                </div>
+                <div class="grid-item">
+                    <ol class="first-semister">
+                        Java Programming Language [ICT Ed. 455]<br>
+                        
+                    </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Data Communication and Networks [ICT Ed. 456]<br>
+                   
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Software Engineering and Project Management [ICT Ed. 457]<br>
+                    
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Discrete Mathematics [Math Ed. 456]
+<br>
+                    
+                    
+                </ol></div>
+              
+                
+            </div><br><br>
+        </section>
+    </main>
+<footer>
+    <div class="footer-container">
+        <!-- Our Office Section -->
+        <div class="footer-section">
+            <h3>Syllabus:</h3>
+            <div class="map">
+                <a href="1st.html">1st Sem</a>
+                <a href="2nd.html">2nd Sem</a>
+                <a href="3rd.html">3rd Sem</a>
+                <a href="4th.html">4th Sem</a>
+                <a href="5th.html">5th Sem</a>
+                <a href="6th.html">6th Sem</a>
+                <a href="8th.html">8th Sem</a>
+              
+              
+               
+            </div>
+            
+        </div>
+
+        <!-- Say Hello Section -->
+        <div class="footer-section">
+            <h3>Say Hello</h3>
+            <p>If you're interested or have something new to share, please feel free to help!</p>
+            <p><a href="mailto:sayhi@baamboostudio.com">aswasankhadka9@gmail.com</a></p>
+        </div>
+
+        <!-- Subscribe Us Section -->
+        <div class="footer-section">
+            <h3 style="text-decoration: underline;">Follow Us</h3>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                
+            </div>
+            <form class="subscribe-form" onsubmit="return validateMessage()">
+                <textarea id="message" placeholder="Your message here..." required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
+<script>
+window.onload = function() {
+// Delay the scroll reset by 10 milliseconds
+    setTimeout(function() {
+    document.documentElement.scrollTop = 0; // Reset scroll position for most browsers
+    document.body.scrollTop = 0;            // For Safari
+    }, 10);  // Delay by 10 milliseconds (you can adjust the value)
+};
+// Function to toggle the mobile menu
+function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('active'); // Toggle the 'active' class to show/hide menu
+}
+
+// Function to hide the menu after scrolling on mobile
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    const navList = document.getElementById('nav-list');
+    const menuButton = document.querySelector('.menu-toggle');
+        if (window.innerWidth <= 768) {  // Check for mobile screen size
+            let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScrollTop > lastScrollTop && navList.classList.contains('active')) {
+            navList.classList.remove('active'); // Hide menu on scroll down
+            }
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Reset scroll position
+            }
+});
+// Automatically close the menu when switching to a larger screen
+window.addEventListener('resize', function() {
+    const navList = document.getElementById('nav-list');
+        if (window.innerWidth > 768 && navList.classList.contains('active')) {
+            navList.classList.remove('active'); // Remove active class on resize to larger screen
+            }
+});
+function validateMessage() {
+// Get the message text area value
+var message = document.getElementById("message").value;
+// If the message is not empty, proceed with the form submission
+    if (message.trim() !== "") {
+// Create a mailto link with the email and the message content
+        var email = "aswasankhadka9@gmail.com"; // Replace with your desired email
+        var subject = "Message from Contact Form";
+        var body = encodeURIComponent(message);
+        var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+ // Redirect to the mailto link
+window.location.href = mailtoLink;
+     return false; // Prevent the form from submitting the traditional way
+        } else {
+// Show an alert if the message is empty
+        alert("Please enter a message before submitting.");
+        return false; // Prevent form submission if the message is empty
+        }
+}
+    </script>
+
+</body>
+</html>

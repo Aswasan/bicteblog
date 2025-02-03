@@ -1,0 +1,184 @@
+
+/* Welcome here, 
+ * you can say hello 
+ * or see other projects like this 
+ * at quentinrenaux.com
+ * and we can speak at    
+ * twitter : @quentinrenaux 
+ * insta : @quentinrenaux
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Limelight&family=Rock+3D&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Henny+Penny&family=Jaro:opsz@6..72&family=Keania+One&family=Limelight&family=Londrina+Shadow&family=Rock+3D&display=swap');
+ /* BASIC CODE  
+  * ------------------ */
+ *, div, p, img {  
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+ }
+ 
+ /* BODY CODE  
+  * ------------------ */
+ body {
+     font-family: sans-serif;
+     margin: 0;
+     
+     }
+.navbar {
+        font-family: "Keania One", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #a00b0b;
+        padding: 10px 20px;
+        font-size: 140%;
+    }
+    .navbar a:hover {
+        color: #000000; /* Change text color on hover */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+    .navbar .logo {
+        font-family: "Henny Penny", system-ui;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin-left: 20px;
+    }
+
+    .navbar ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    .footer {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .css-masonry {
+        padding: 20px;
+    }
+ /* MASONRY GRID 
+  * ------------------ */
+ .css-masonry { 
+     -webkit-column-count: 4;
+     -moz-column-count:4;
+     column-count: 4;
+     
+     -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+     column-gap: 1em;
+     
+     -moz-column-gap: 1.5em;
+     -webkit-column-gap: 1.5em;    
+     column-gap: 1.5em;
+     
+     margin: 1.5em;    
+     padding: 0;
+     font-size: .85em;
+ }
+ body {
+    transition: opacity 0.5s ease;
+}
+.fade-out {
+    opacity: 0;
+}
+ /* ITEM 
+  * ------------------ */
+ .item {
+     display: inline-block;
+     width: 100%;
+     
+     font-family: 'Alata', sans-serif;
+     font-size: 1.8em;
+     
+     background: #fff;
+     margin: 0 0 1em;
+     width: 100%;
+     
+ 
+     border: 2px solid black;
+     border-radius: 6px; 
+     overflow: hidden; /* to affect the inner elements with the radius */
+ }
+ 
+ .item img{ max-width:100%; font-size: 0; height: auto; /* to be sure to don't have a spacing after the img due to the inline block function */ }
+ 
+ .item-number {
+     border: 2px solid black;
+     border-radius: 50%;
+     background: #fff;
+     
+     
+     font-size: 0.8em;
+     display: flex; /* flex is for center verticaly and horizontaly the number */
+     align-items: center;
+     justify-content: center;
+     width: 50px;
+     height: 50px;
+     padding: 0 2px 2px 0; /* I display right and bottom padding because of the font who is not center par default : delete if you change the font */
+     
+     position: absolute;
+     margin: 5px;
+ }
+ 
+ .item .title {
+     border: 0px solid rgb(44, 44, 97);
+     padding: 10px 10px 14px;
+ }
+ .item :hover{
+    transform: scale(1.05);
+ }
+ .french {color: grey; font-size: 0.8em;}
+ 
+ @media only screen and (max-width: 420px) {
+     .css-masonry {
+         -moz-column-count: 1;
+         -webkit-column-count: 1;
+         column-count: 1;
+     }
+ }
+ 
+ @media only screen and (min-width: 421px) and (max-width: 768px){
+     .css-masonry {
+         -moz-column-count: 2;
+         -webkit-column-count: 2;
+         column-count: 2;
+     }
+ }
+ @media only screen and (min-width: 769px) and (max-width: 1000px){
+     .css-masonry {
+         -moz-column-count: 3;
+         -webkit-column-count: 3;
+         column-count: 3;
+     }
+ }
+ @media only screen and (min-width: 1001px) {
+     .css-masonry {
+         -moz-column-count: 4;
+         -webkit-column-count: 4;
+         column-count: 4;
+     }
+ }

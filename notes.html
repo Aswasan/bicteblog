@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <style>
+    /* Reset and full-screen setup */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Video container */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Push behind the content */
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Ensures the video fills the screen */
+    }
+
+    /* Content styling */
+    .content {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      z-index: 1; /* Keep content above the video */
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <!-- Full-Screen Video -->
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="laterr.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Content overlay -->
+ 
+  <script>
+    // Optional: Add event listeners to monitor video status
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.querySelector("video");
+
+      // Log when the video starts playing
+      video.addEventListener("play", () => {
+        console.log("Video is playing.");
+      });
+
+      // Log when the video loops
+      video.addEventListener("ended", () => {
+        console.log("Video ended and will loop.");
+      });
+    });
+  </script>
+</body>
+</html>

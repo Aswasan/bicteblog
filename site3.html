@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswasan</title>
+    <link rel="stylesheet" href="site3.css">
+    <link rel="shortcut icon" href="favi-photoaidcom-cropped.png"  type="image/x-icon">
+</head>
+
+<body>
+    <div class="logo"><a href="#"><img src="A (2).png" alt="" width="45px" height="45px" ></a></div>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">.Home</a></li>
+            <li><a href="#about">.About</a></li>
+            <li><a href="#services">.Projects</a></li>
+            <li><a href="#contact">.Contact</a></li>
+        </ul>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="menu" id="menu">
+        <ul class="nav-list" id="navList">
+            <li><a href="#home">Home</a></li>
+            <hr>
+            <li><a href="#about">About</a></li><hr>
+            <li><a href="#services">Projects</a></li><hr>
+            <li><a href="#contact">Contact</a></li><hr>
+        </ul>
+    </div>
+    <div class="content">
+        <section id="home" class="welcome-section">
+            <p>Hi, I'm</p>
+            <h1>Aswasan Khadka</h1>
+            <p1>Web Developer</p1><br><br>
+            <a href="#about" class="about-button">Downoad CV</a>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>This is the about section.</p>
+        </section>
+        <section id="services">
+            <h1>Our Services</h1>
+            <p>This is the services section.</p>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>This is the contact section.</p>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 All rights reserved.</p>
+        Developed by ASWASAN KHADKA
+    </footer>
+    
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        const navList = document.getElementById('navList');
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar ul li a'); // Desktop links
+        const mobileLinks = document.querySelectorAll('.menu ul li a'); // Mobile menu links
+    
+        // Toggle menu visibility on clicking the menu toggle
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    
+        // Hide menu when clicking on a menu item
+        navList.addEventListener('click', () => {
+            navList.classList.remove('active');
+        });
+    
+        // Hide menu when clicking anywhere outside the menu
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                navList.classList.remove('active');
+            }
+        });
+    
+        // Update document title and highlight navigation links based on visible section
+        window.addEventListener('scroll', () => {
+            let currentSection = null;
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 50;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+    
+            // Update document title
+            switch (currentSection) {
+                case 'home':
+                    document.title = 'Aswasan-Home';
+                    break;
+                case 'about':
+                    document.title = 'Aswasan-About';
+                    break;
+                case 'services':
+                    document.title = 'Aswasan-Projects';
+                    break;
+                case 'contact':
+                    document.title = 'Aswasan-Contact';
+                    break;
+                default:
+                    document.title = 'Aswasan';
+            }
+    
+            // Highlight active links in both desktop and mobile menus
+            const highlightLinks = (links) => {
+                links.forEach((link) => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(currentSection)) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+    
+            highlightLinks(navLinks); // Update desktop links
+            highlightLinks(mobileLinks); // Update mobile menu links
+        });
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const navList = document.getElementById('navList');
+            const menuButton = document.querySelector('.menu-toggle');
+            if (window.innerWidth <= 768) {  // Check for mobile screen size
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScrollTop > lastScrollTop && navList.classList.contains('active')) {
+                    navList.classList.remove('active'); // Hide menu on scroll down
+                }
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Reset scroll position
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BICTE: Assessment and Evaluation-2080</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="favi-photoaidcom-cropped.png" type="image/x-icon">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Limelight&family=Rock+3D&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Henny+Penny&family=Jaro:opsz@6..72&family=Keania+One&family=Limelight&family=Londrina+Shadow&family=Rock+3D&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #a00b0b;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo {
+            font-family: "Henny Penny", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            top: 20px; 
+            left: 20px; 
+            font-size: 30px;
+            color: white;
+        }
+        nav {
+            
+            font-family: "Keania One", sans-serif;
+            display: flex;
+            font-size: 140%;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fdfdfd;
+            
+        }
+        nav a:hover {
+        color: #050505; /* Change text color on hover */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .image-box {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            display: none; /* Hide by default */
+        }
+        .image-box.active {
+            display: block; /* Show when the class "active" is added */
+        }
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+        .navigation-buttons button,
+        .download-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .navigation-buttons button:hover,
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+        .image-box {
+        margin: 20px auto;
+        width: 80%;
+        max-width: 600px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        opacity: 0; /* Start hidden */
+        transform: translateX(100%); /* Start off-screen */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    }
+
+    .image-box.active {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Centered on-screen */
+    }
+
+    .image-box.exiting {
+        opacity: 0; /* Fade out */
+        transform: translateX(-100%); /* Slide out to the left */
+    }
+        footer {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        footer img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+    
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .download-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .download-button i {
+        margin-right: 8px; /* Space between icon and text */
+    }
+
+    .download-button:hover {
+        background-color: #0056b3;
+    }
+    .logo {
+        max-width: 50px;  /* Adjust this value to make the logo smaller or larger */
+        height: auto;  /* Maintain aspect ratio */
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    
+        <div class="logo-container">
+            <a href="site3.html">
+                <img src="Screenshot 2024-12-03 130556.png" alt="Logo" class="logo">
+            </a>
+           
+    </div>
+    <nav>
+        <a href="./Batch.html" id="home">Home</a>
+        <a href="#about">About</a>
+        <a href="site3.html">Contact</a>
+      
+    </nav>
+</header>
+
+<main>
+    <div>
+        <h1 style="font-weight: bold;">Model Questions of BICTE</h1>
+        
+        
+        <!-- Question 1 (Visible by default) -->
+        <div class="image-box active" id="question1">
+            
+            <img src="Assessment-2080_page-0001.jpg" alt="Model Image" style="width: 100%; border-radius: 8px;">
+        </div>
+
+        <!-- Question 2 (Initially hidden) -->
+        <div class="image-box" id="question2">
+           
+            <img src="DCN-2080_page-0001.jpg" alt="Model Image" style="width: 100%; border-radius: 8px;">
+        </div>
+
+        <!-- Question 3 (Initially hidden) -->
+        <div class="image-box" id="question3">
+            
+            <img src="java-2080_page-0001.jpg" alt="Model Image" style="width: 100%; border-radius: 8px;">
+        </div>
+        <div class="image-box" id="question4">
+            <h2>Question 4</h2>
+            <img src="sepm-2080_page-0001.jpg" alt="Model Image" style="width: 100%; border-radius: 8px;">
+        </div>
+        <div class="image-box" id="question5">
+            <h2>Question 5</h2>
+            <img src="Discrete-2080_page-0001.jpg" alt="Model Image" style="width: 100%; border-radius: 8px;">
+        </div>
+        <!-- Navigation buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn">← Previous</button>
+            <a href="" class="download-button" download>
+                <i class="fas fa-download" style="margin-right: 8px;"></i>Download
+            </a>
+            <button id="nextBtn">Next →</button>
+        </div>
+        
+    </div>
+</main>
+
+<footer>
+    <div style="margin-top: 60px;"> <!-- Added margin-top to create space -->
+        <a href="home">
+        <img src="Screenshot 2024-12-02 150626.png" alt="Logo">
+    </a>
+    </div>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <p>&copy; All BICTE- 2024</p>
+</footer>
+
+<script>
+    let currentQuestion = 1; // Default to Question 1
+    const totalQuestions = 5; // Total number of questions
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const downloadBtn = document.querySelector(".download-button");
+
+    // Define the file links for each question
+    const downloadLinks = {
+        1: "Assessment-2080_page-0001.jpg",
+        2: "DCN-2080_page-0001.jpg",
+        3: "java-2080_page-0001.jpg",
+        4: "sepm-2080_page-0001.jpg",
+        5: "Discrete-2080_page-0001.jpg"
+    };
+    const titles = {
+        1: "Model Questions - Question 1",
+        2: "Model Questions - Question 2",
+        3: "Model Questions - Question 3",
+        4: "Model Questions - Question 4",
+        5: "Model Questions - Question 5",
+    };
+    function updateDownloadLink(questionNumber) {
+        // Update the href attribute of the download button
+        if (downloadLinks[questionNumber]) {
+            downloadBtn.href = downloadLinks[questionNumber];
+        }
+    }
+
+    function showQuestion(questionNumber) {
+        // Get the currently active question
+        const current = document.querySelector(".image-box.active");
+        if (current) {
+            current.classList.add("exiting"); // Add exiting animation
+            setTimeout(() => {
+                current.classList.remove("active", "exiting"); // Remove active and exiting after animation
+            }, 500); // Match transition duration
+        }
+
+        // Show the new question after a short delay
+        setTimeout(() => {
+            const next = document.getElementById("question" + questionNumber);
+            next.classList.add("active");
+        }, 500); // Delay matches transition duration
+
+        // Update the download link for the new question
+        updateDownloadLink(questionNumber);
+    }
+
+    // Event listener for the Next button
+    nextBtn.addEventListener("click", () => {
+        if (currentQuestion < totalQuestions) {
+            currentQuestion++;
+            showQuestion(currentQuestion);
+        }
+    });
+
+    // Event listener for the Previous button
+    prevBtn.addEventListener("click", () => {
+        if (currentQuestion > 1) {
+            currentQuestion--;
+            showQuestion(currentQuestion);
+        }
+    });
+
+    // Initially show the first question and set the initial download link
+    showQuestion(currentQuestion);
+    updateDownloadLink(currentQuestion);
+
+
+    document.getElementById("home").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    // Start the transition effect
+    document.body.style.transition = "opacity 0.5s ease"; // Set the transition effect
+    document.body.style.opacity = "0"; // Fade out
+
+    // Redirect after the fade out is complete
+    setTimeout(function() {
+        window.location.href = "choose.html"; // Replace with your target page
+    }, 500); // Match the duration of the fade out
+});
+document.getElementById("contact").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    // Start the transition effect
+    document.body.style.transition = "opacity 0.5s ease"; // Set the transition effect
+    document.body.style.opacity = "0"; // Fade out
+
+    // Redirect after the fade out is complete
+    setTimeout(function() {
+        window.location.href = "site3.html"; // Replace with your target page
+    }, 500); // Match the duration of the fade out
+});
+</script>
+
+
+
+</body>
+</html>

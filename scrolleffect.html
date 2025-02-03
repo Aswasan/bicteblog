@@ -1,0 +1,31 @@
+  <style>    
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 7px; /* Adjust the width for vertical scrollbar */
+    height: 1px; /* Adjust the height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red; /* Set the color of the scrollbar thumb */
+    border-radius: 1px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkred; /* Darker shade when hovered */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+</style>
+
+<script>// for refreshing and top page appear
+window.onload = function() {
+    // Delay the scroll reset by 10 milliseconds
+    setTimeout(function() {
+        document.documentElement.scrollTop = 0; // Reset scroll position for most browsers
+        document.body.scrollTop = 0;            // For Safari
+    }, 10);  // Delay by 10 milliseconds (you can adjust the value)
+};
+</script>

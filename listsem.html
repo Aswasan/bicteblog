@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semister-List:</title>
+    <link rel="shortcut icon" href="favi-photoaidcom-cropped.png" type="image/x-icon">
+</head>
+<style>
+    /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 154, 177);
+    color: #fff;
+    padding: 15px 25px;
+    position: relative;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Center navigation for screens larger than 768px */
+@media screen and (min-width: 769px) {
+    header nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+header nav .menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav .menu-toggle {
+        display: block;
+    }
+
+    header nav ul.active {
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 154, 177);
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+}
+
+/* Content section */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+/* Grid layout for items 3-10 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    gap: 0px;
+    
+    max-width: 550px; /* Restrict the max width */
+    margin: 0 auto; /* Center the grid */
+}
+/* Grid item hover effect */
+.grid-item:hover {
+    background-color: #a7a7a76c; /* Light black background */
+  
+    cursor: pointer; /* Change the cursor to a pointer when hovered */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* List item hover effect */
+.first-semister a:hover {
+    color: #0038b1; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer when hovered */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* For large screens, add grid items 1 and 2 to the left */
+.grid-left {
+    position: absolute;
+    top: 100px; /* Slightly below the header */
+    left: 20px; /* Near the left corner */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for large screen */
+    gap: 20px;
+    width: 200px;
+}
+
+/* Hide grids 1 and 2 on small screens */
+@media screen and (max-width: 768px) {
+    .grid-left {
+        display: none;
+       /* Hide grids 1 and 2 on mobile */
+    }
+    
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+.first-semister{
+    list-style-type:disc; /* This will add bullets (dots) to each <a> tag */
+    padding: 0px;
+    
+}
+.first-semister li{
+    margin-left: 5%;
+    
+}
+.first-semister a{color: rgba(3, 134, 249, 0.881);
+
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" />
+        </div>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+            <ul id="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content"><br><br>
+            <h1>BICTE Old-Questions</h1><br>
+            
+            <!-- Grids 1 and 2 positioned at the left corner for larger screens -->
+            <div class="grid-left">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+            </div>
+            
+            <!-- Grids 3 to 10 centered in the middle of the screen -->
+            <div class="grid-container">
+                <div class="grid-item">
+                    <ol class="first-semister">
+                        First Semester<br>
+                        <li><a >English</a></li>
+                        <li><a >Nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                    </ol>
+                
+                </div>
+                <div class="grid-item">
+                    <ol class="first-semister">
+                        Second Semester<br>
+                        <li><a>English</a></li>
+                        <li><a >Nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                        <li><a>nepali</a></li>
+                    </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Third Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Fourth Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Fifth Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Sixth Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Seventh Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+                <div class="grid-item"><ol class="first-semister">
+                    Eighth Semester<br>
+                    <li><a >English</a></li>
+                    <li><a >Nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                    <li><a>nepali</a></li>
+                </ol></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to toggle the menu
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+
+        // Function to hide the menu after scrolling on mobile
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            const navList = document.getElementById('nav-list');
+            const menuButton = document.querySelector('.menu-toggle');
+            if (window.innerWidth <= 768) {  // Check for mobile screen size
+                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScrollTop > lastScrollTop && navList.classList.contains('active')) {
+                    navList.classList.remove('active'); // Hide menu on scroll down
+                }
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Reset scroll position
+            }
+        });
+
+        // Automatically close the menu when switching to a larger screen
+        window.addEventListener('resize', function() {
+            const navList = document.getElementById('nav-list');
+            if (window.innerWidth > 768 && navList.classList.contains('active')) {
+                navList.classList.remove('active'); // Remove active class on resize to larger screen
+            }
+        });
+    </script>
+</body>
+</html>
